@@ -1,0 +1,30 @@
+render sprites
+blit 
+flip
+blit
+sprite.draw
+flip
+
+493*359
+guessing 496 or 488 as width
+guessing 360 as height
+block is 8*8
+
+
+1
+5
+9
+13
+
+want only 1000 squares on grid number is currently 71*56 = 3976
+needs to be 40*25 = 1000
+
+40 * 10 = 400
+2 * 39 = 78
+width = 478
+
+using proportions for height gives me: 376.77647
+
+25*10 = 250
+2*24 = 48
+height = 298

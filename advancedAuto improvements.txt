@@ -1,0 +1,34 @@
+i might never use this, but if some time in the future i decide to come back to this and improve the AI in advancedAuto,
+ here is a good place to start
+
+look at image advancedAutoFailure.png
+
+at arrow #1, lookAhead doesn't get called until AFTER the 5th up movement
+
+lookAhead does get called for the final 4 moves
+
+in this particular game, the AI didn't lose because threeAhead(this function should be renamed since the number of moves it
+looks ahead is based on the max value declared inside the funcion. at the time of writing this value is set to 8 so the
+snake is really looking 8 moves ahead in each direction) didn't look far enough
+
+the AI lost because of the first conditional statement in advancedAuto
+
+consider changing that conditional and the ones below it to something similar to the following:
+
+only move up if:
+    1 the food is above the head of the snake
+    2 the body of the snake is not between the head and the food
+    3 if part of the body is at the same y coordinate as the food (forming a horizontal line):
+        only move up if none of the x coordinates of the body parts that have the same y as the food are the same as the
+        x of the head
+    4 none of the y coordinates of the body are the same as the y of the food
+    5  if food is to the left:
+        the position immediately to the left of (head x, food y) must not be occupied by the body by the time the head
+        reaches there
+       if food is to the right:
+        the position immediately to the right of (head x, food y) must not be occupied by the body by the time the head
+        reaches there
+
+    1 must be true, 2 must be true, (3 or 4) must be true, 5 must be true if the x of the food != x of the head
+
+change the specific directions mentioned above to correspond with the direction being considered

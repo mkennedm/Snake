@@ -1,0 +1,38 @@
+Move chooseMove(snake, parts, food){ 
+	max = -100
+	oldParts = [a copy of the original coordinates of each body part]
+	oldHead = (a copy of the original coordinates of the head) //single tuple
+	best = snake.direction
+	dirs = [list of three directions (every one except the opposite of the current direction)] 
+	for(each dir in dirs){
+		snake.move //the specific move function called would depend on dir
+		update the body
+		float val = tree(dir, 1 ); 
+		if(val > max){ 
+			best = dir; max = val; 
+	 	}
+		sake.center = head
+		parts = body
+	 }
+	return best; 
+} 
+
+float tree(snake, parts, food, int depth) { 
+	if( t is a leaf node || depth == D){ // leaf node could be 
+		return eval(t); // because eval(t) = ± Inf  
+	}
+	float val = -100;
+	oldParts = [a copy of the original coordinates of each body part]
+	oldHead = (a copy of the original coordinates of the head) //single tuple 
+	dirs = [list of three directions (every one except the opposite of the current direction)]
+	for(each dir in dirs){ //somewhere in this block prevent snake from moving off screen
+		if not badMove{
+			snake.movedir
+			update 
+			val = max(val, tree( c, depth+1 );
+			snake.center = oldHead
+			parts = oldParts
+}
+	} 
+	return val; 	
+} 

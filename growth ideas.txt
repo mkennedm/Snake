@@ -1,0 +1,11 @@
+each item in list (x, y, direction) 
+when new piece gets added 
+search to the back of list
+place piece in opposite direction
+
+
+eat
+append to list of parts
+
+
+blit every part of snake

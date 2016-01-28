@@ -1,0 +1,51 @@
+write function that takes in coordinates of snake body segments and randomly chooses coordinates
+for food
+
+food needs to be on the same grid as the snake so snake lines up evenly when it makes contact
+
+food cannot share coordinates with a segment of the snake
+
+food must be in bounds of the dimensions of the screen
+
+	x = random width
+	y = random height
+
+	#x and y might not be on grid.
+	# if they are on the grid they are probably not the center of their square
+	#4 cases
+	x is not on grid y is not on grid #least likely x % 12 == 11 and y % 12 == 11
+		x = x - 6
+		y = y - 6
+		#x and y are now the center of the top left square
+	x is on grid y is not on grid #tied for second x % 12 != 11 and y % 12 != 11
+		y = y - 6
+		if x % 12 != 5:
+			i = 1
+			while 
+	x is not on grid y is on grid #tied for second x % 12 == 11 y % 12 != 11
+	x is on grid y is on grid #most likely x % 12 != 11 and y % 12 != 11
+
+
+n  u  d
+0  5  X
+1  4  X
+2  3  X
+3  2  X
+4  1  X
+5  0  0
+6  11 1
+7  10 2
+8  9  3
+9  8  4
+10 7  5
+11 6  6  #true for every n where n%12 == 11  
+12 5  7
+13 4  8
+14 3  9
+15 2  10
+16 1  11
+17 0  0
+
+18
+19
+20
