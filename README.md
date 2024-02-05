@@ -1,3 +1,4 @@
+# Snake
 ![snake-full](https://github.com/mkennedm/Snake/assets/8769212/a1d2b337-3b80-449d-ae5c-7cf849c1fdf3)
 
 If you haven't played snake before, then you're at least familiar with how the game works. I'll spare you an explanation of its simple and ubiquitous design. Instead I'll use this page to explain why I chose to make it and what's different about my version.
